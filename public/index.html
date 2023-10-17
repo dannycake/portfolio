@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>danny.ink</title>
+
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="danny.ink">
+    <meta property="og:description" content="my projects and such 😼">
+    <meta property="og:image" content="https://danny.ink/assets/og-image.png">
+    <meta property="og:url" content="https://danny.ink">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="/assets/main.css">
+
+    <script>
+        let currentActivity = {%%};
+    </script>
+    <script src="/assets/main.js"></script>
+</head>
+<body>
+<center>
+    <div class="flexbox-container">
+        <div class="flexbox-left">
+            <div class="flexbox-item content">
+                <h1 class="title">danny<span class="small fade">.ink</span></h1>
+
+                <p>
+                    college freshman, computer science major, and license plate hoarder.
+                </p>
+
+                <img class="seperator big-seperator" src="/assets/seperator.png">
+
+                <p class="social-caption">my projects & work:</p>
+                <div class="projects-holder">
+                    <div class="project">
+                        <div class="project-top">
+                            <img class="project-icon" alt="extension icon" src="/assets/projects/rmp.png">
+                            <div class="project-info">
+                                <h3 class="project-title">GMU RateMyProfessors <span class="fade">(js)</span></h3>
+                                <p>Browser extension that adds tags showing scores for teachers directly on MyPatriotWeb, sourced from RateMyProfessors.com. It makes scheduling easy as you can directly see the ratings of the teacher for a class.</p>
+                            </div>
+                        </div>
+                        <div class="project-bottom">
+                            <a class="project-link" target="_blank" href="https://chrome.google.com/webstore/detail/jannfligmijdacakcoggclcckgnahjol">
+                                <img src="/assets/icons/chrome.svg" alt="chrome webstore" class="social-icon">
+                                chrome webstore
+                            </a>
+                            <a class="project-link" target="_blank" href="https://github.com/mxmmxx/patriotweb-rmp">
+                                <img src="/assets/icons/github.svg" alt="github" class="social-icon">
+                                github
+                            </a>
+                        </div>
+                        <img class="seperator" src="/assets/seperator.png">
+                    </div>
+                    <div class="project">
+                        <div class="project-top">
+                            <img class="project-icon" alt="extension icon" src="/assets/projects/attire.png">
+                            <div class="project-info">
+                                <h3 class="project-title">Attire <span class="fade">(node.js)</span></h3>
+                                <p>Roblox clothing bot that automatically found clothing assets, modified, and reuploaded them. Attire detects duplicates assets and notifies the user of clothing sales.</p>
+                            </div>
+                        </div>
+                        <div class="project-bottom">
+                            <a class="project-link" target="_blank" href="https://github.com/mxmmxx/roblox-clothing-bot">
+                                <img src="/assets/icons/github.svg" alt="github" class="social-icon">
+                                github
+                            </a>
+                        </div>
+                        <img class="seperator" src="/assets/seperator.png">
+                    </div>
+                    <div class="project">
+                        <div class="project-top">
+                            <img class="project-icon" alt="extension icon" src="/assets/projects/quaid.png">
+                            <div class="project-info">
+                                <h3 class="project-title">Quaid <span class="fade">(node.js)</span></h3>
+                                <p>A highly configurable Roblox trade bot centered around manually valuing items. Started as a paid product but due to Roblox's API changes, it no longer functions to the same degree (14,000 trades per day to just 100).</p>
+                            </div>
+                        </div>
+                        <div class="project-bottom">
+                            <a class="project-link" target="_blank" href="https://github.com/mxmmxx/quaid">
+                                <img src="/assets/icons/github.svg" alt="github" class="social-icon">
+                                github
+                            </a>
+                            <a class="project-link" target="_blank" href="https://legacy-quaid.danny.ink">
+                                <img src="/assets/icons/github.svg" alt="github" class="social-icon">
+                                documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flexbox-right">
+            <div class="flexbox-item box socials">
+                <p class="social-caption">my socials:</p>
+                <div class="links">
+                    <a class="social-link" target="_blank" href="https://t.me/dannydotink">
+                        <img class="social-icon" src="/assets/icons/telegram.svg">telegram</a>
+                    <a class="social-link" target="_blank" href="https://discord.com/users/142709738721902592">
+                        <img class="social-icon" src="/assets/icons/discord.svg">discord</a>
+                    <a class="social-link" target="_blank" href="https://github.com/mxmmxx">
+                        <img class="social-icon" src="/assets/icons/github.svg">github</a>
+                </div>
+            </div>
+            <div class="flexbox-item box music-player">
+                <p id="music-caption">i'm currently listening to:</p>
+                </br>
+
+                <img id="artwork"
+                     src="https://lastfm.freetls.fastly.net/i/u/770x0/55bb0171f36edfd529a87b98f2c6c67a.jpg#55bb0171f36edfd529a87b98f2c6c67a"
+                     alt="thumbnail">
+
+                <br/>
+                <div class="playbar">
+                    <p id="player-current-pos">82</p>
+                    <progress id="progress" value="122" max="300"></progress>
+                    <p id="player-end-pos">180</p>
+                </div>
+                <p id="player-artist">glaive</p>
+                <p id="player-title" style="font-weight:600;">the car</p>
+                <p id="player-album" class="fade">the car (2023)</p>
+
+                <a href="https://last.fm/user/mxmmxx" target="_blank">
+                    <button>
+                        <img src="/assets/icons/last-fm.svg" alt="last-fm" class="button-logo">
+                        <p>view my last.fm</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</center>
+</body>
+</html>
