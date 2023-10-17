@@ -25,7 +25,7 @@ const getPlexActivies = () => new Promise(resolve => {
                 resp.body?.response?.data);
         })
         .catch(error => {
-            print('Failed to fetch activities from Tautulli',
+            console.log('Failed to fetch activities from Tautulli',
                 error.response ? error.response.text : error);
 
             return resolve();
