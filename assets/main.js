@@ -1,9 +1,11 @@
 window.addEventListener('load', () => {
-    [...document.getElementsByTagName('img')]
+    const imgs = document.getElementsByTagName('img');
+    [...imgs]
         .map(img => img.draggable = false);
 
     const mediaPlayer = {
         artwork: document.getElementById('artwork'),
+        progressHolder: document.getElementById('playbar'),
         progressBar: document.getElementById('progress'),
         currentPos: document.getElementById('player-current-pos'),
         endPos: document.getElementById('player-end-pos'),
@@ -70,6 +72,9 @@ window.addEventListener('load', () => {
             state === 'playing'
                 ? 'i\'m currently listening to:'
                 : 'i just listened to:';
+
+        if (state !== 'playing') mediaPlayer.progressHolder.style.display = 'none';
+        else mediaPlayer.progressHolder.style.display = 'inline-block';
     }
 
     const updateAndModifyProgress = () => {
@@ -88,6 +93,19 @@ window.addEventListener('load', () => {
         await updateMediaStatus();
         setInterval(updateMediaStatus, 5 * 1000);
     })();
+
+    let i = 0;
+    (async () => {
+        while (true) {
+            document.body.style.filter = 'hue-rotate(' + i + 'deg)';
+
+            for (const img of document.getElementsByClassName('project-icon'))
+                img.style.filter = 'hue-rotate(' + (360 - i) + 'deg)';
+
+            i ++;
+            if (i > 360) i = 0;
+
+            await new Promise(resolve => setTimeout(resolve, 50));
+        }
+    })();
 });
-
-

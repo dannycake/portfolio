@@ -286,13 +286,13 @@ body {
     padding: 0;
 }
 
-.playbar, .playbar > p {
+#playbar, #playbar > p {
     display: inline-block;
     align-content: center;
     align-self: center;
     margin: 0.75rem 0;
 }
-.playbar > progress {
+#playbar > progress {
     border: none;
     padding: 0;
     border-radius: 4px;
