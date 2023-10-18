@@ -94,7 +94,7 @@ window.addEventListener('load', () => {
         setInterval(updateMediaStatus, 5 * 1000);
     })();
 
-    let i = 0;
+    /*let i = 0;
     (async () => {
         while (true) {
             document.body.style.filter = 'hue-rotate(' + i + 'deg)';
@@ -107,5 +107,5 @@ window.addEventListener('load', () => {
 
             await new Promise(resolve => setTimeout(resolve, 50));
         }
-    })();
+    })();*/
 });

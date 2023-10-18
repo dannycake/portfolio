@@ -9,6 +9,8 @@
 
 * {
     font-family: 'Gabarito', sans-serif;
+    letter-spacing: -0.03em;
+    font-size: 1.02em;
 }
 
 a,a:visited,a:hover,a:active {
@@ -48,14 +50,44 @@ body {
     border-radius: 0.5rem;
     width: 100%;
     text-align: center;
-    align-items: center;
     transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 0;
+}
+
+.social-text {
+    flex: 3;
 }
 
 .social-link:hover {
     background: var(--primary);
     color: #000;
     border: 2px dashed #ddd;
+    transform: scale(1.05);
+}
+
+.social-link:hover>.social-icon,.project-link:hover>.social-icon {
+    filter: invert(0);
+}
+
+.project-link {
+    padding: 0.5em;
+    margin: 0.25em;
+    border: 2px dashed var(--primary);
+    border-radius: 0.5rem;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.project-link:hover {
+    background: var(--primary);
+    color: #000;
+    border: 2px dashed #ddd;
+    transform: scale(1.05);
 }
 
 .title {
@@ -220,7 +252,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 2em;
+    gap: 0;
 }
 
 .project-info {
