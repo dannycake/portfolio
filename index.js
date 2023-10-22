@@ -82,6 +82,10 @@ app.get('/', (req, resp) => {
     );
 });
 
+app.get('*', (req, resp) => {
+    resp.redirect(`https://s.danny.ink${req.url}`);
+})
+
 app.get('/api/activity', express.json(), async (_req, resp) => {
     return resp.send(currentActivity);
 });
