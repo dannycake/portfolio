@@ -31,8 +31,10 @@ const getPlexActivies = () => new Promise(resolve => {
             return resolve();
         })
 });
+
+//https://tautulli.danny.ink/pms_image_proxy/?img=%2Flibrary%2Fmetadata%2F29276%2Fthumb%2F1691985930&rating_key=29276&width=300&height=300&opacity=100&background=282828&fallback=cover&refresh=true
 const getImageURL = (url) =>
-    `${apiHost}/pms_image_proxy?img=${encodeURIComponent(url)}&width=300&height=300&fallback=cover`;
+    `${apiHost}/pms_image_proxy?img=${encodeURIComponent(url)}&width=300&height=300&opacity=100&background=282828&fallback=cover&refresh=true`;
 
 const fetchAndUpdateActivity = async () => {
     const activies = await getPlexActivies();
